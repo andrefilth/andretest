@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="UTF-8" />
+<title>App</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src="/app/app.js"></script>
+<script src="/app/homeController.js"></script>
+</head>
+<body ng-controller="homeController">
+	<form ng-submit="save(person)">
+		<input type="text" ng-model="person.name" placeholder="Name"
+			required="required" /> 
+			
+		<input type="text" ng-model="person.age"
+			placeholder="Age" required="required" /> 
+			
+		<input type="submit"
+			value="Save" />
+	</form>
+
+	<input type="text" ng-model="id" />
+	<button ng-click="find(id)">Buscar</button>
+	<div ng-show="person">{{person}}</div>
+</body>
+</html>
